@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpíadas Brasileiras para Estudantes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
+        }
+        .olympiads {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .olympiad {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .olympiad:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .olympiad img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .olympiad-content {
+            padding: 1.5rem;
+        }
+        .olympiad h2 {
+            color: #007BFF;
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+        .olympiad p {
+            margin: 0.5rem 0;
+        }
+        .olympiad a {
+            color: #00BFFF;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+        .olympiad a:hover {
+            text-decoration: underline;
+        }
+
+        @media (min-width: 768px) {
+            .olympiads {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .olympiads {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Olimpíadas Brasileiras</h1>
+        <br>
+        <a style="text-decoration: none; color: #fffefe;" href="index.html">Inicio</a>
+    </header>
+    <div class="container">
+        <div class="olympiads">
+            <div class="olympiad">
+                <img src="https://via.placeholder.com/1200x400?text=OBMEP" alt="OBMEP">
+                <div class="olympiad-content">
+                    <h2>OBMEP - Olimpíada Brasileira de Matemática das Escolas Públicas</h2>
+                    <p>A OBMEP é uma competição nacional destinada a estimular o estudo da Matemática e promover o aperfeiçoamento dos alunos de escolas públicas e privadas. A olimpíada é conhecida por suas atividades desafiadoras e premiações para os melhores desempenhos.</p>
+                    <a href="https://www.obmep.org.br/" target="_blank">Saiba mais sobre a OBMEP</a>
+                </div>
+            </div>
+            <div class="olympiad">
+                <img src="https://via.placeholder.com/1200x400?text=OBI" alt="OBI">
+                <div class="olympiad-content">
+                    <h2>OBI - Olimpíada Brasileira de Informática</h2>
+                    <p>A OBI é voltada para a área de informática e programação, com o objetivo de incentivar o aprendizado e a prática de habilidades em computação entre os estudantes. A competição promove o desenvolvimento de soluções criativas para problemas propostos.</p>
+                    <a href="https://www.obi.hackathon.com.br/" target="_blank">Saiba mais sobre a OBI</a>
+                </div>
+            </div>
+            <div class="olympiad">
+                <img src="https://via.placeholder.com/1200x400?text=OBA" alt="OBA">
+                <div class="olympiad-content">
+                    <h2>OBA - Olimpíada Brasileira de Astronomia e Astronáutica</h2>
+                    <p>A OBA visa despertar o interesse dos estudantes pela Astronomia e Astronáutica, incentivando a pesquisa e o estudo dessas áreas fascinantes. A competição é destinada a alunos de diferentes níveis de ensino.</p>
+                    <a href="https://www.astro.ib.usp.br/oba/" target="_blank">Saiba mais sobre a OBA</a>
+                </div>
+            </div>
+            <div class="olympiad">
+                <img src="https://via.placeholder.com/1200x400?text=OLP" alt="Olimpíada de Língua Portuguesa">
+                <div class="olympiad-content">
+                    <h2>OLIMPÍADA DE LÍNGUA PORTUGUESA</h2>
+                    <p>Esta olimpíada tem como objetivo promover o estudo da Língua Portuguesa e valorizar a importância da leitura e da escrita entre os estudantes. A competição é destinada a alunos do ensino fundamental e médio.</p>
+                    <a href="https://www.olimpiadalp.com.br/" target="_blank">Saiba mais sobre a Olimpíada de Língua Portuguesa</a>
+                </div>
+            </div>
+            <div class="olympiad">
+                <img src="https://via.placeholder.com/1200x400?text=OBR" alt="OBR">
+                <div class="olympiad-content">
+                    <h2>OLIMPÍADA BRASILEIRA DE ROBÓTICA (OBR)</h2>
+                    <p>A OBR incentiva o desenvolvimento de habilidades em robótica e programação entre os estudantes. A competição envolve a construção e programação de robôs para realizar tarefas específicas.</p>
+                    <a href="https://www.obr.org.br/" target="_blank">Saiba mais sobre a OBR</a>
+                </div>
+            </div>
+            <div class="olympiad">
+                <img src="https://via.placeholder.com/1200x400?text=OBG" alt="OBG">
+                <div class="olympiad-content">
+                    <h2>OLIMPÍADA BRASILEIRA DE GEOGRAFIA (OBG)</h2>
+                    <p>A OBG é uma competição que visa estimular o estudo da Geografia e promover o conhecimento sobre o meio ambiente e a globalização. A olimpíada é destinada a alunos do ensino fundamental e médio.</p>
+                    <a href="https://www.obg.org.br/" target="_blank">Saiba mais sobre a OBG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

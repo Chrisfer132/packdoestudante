@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmulas Matemáticas</title>
+    <link rel="stylesheet" href="formulas.css">
+</head>
+<body>
+    <header>
+        <h1>Fórmulas Matemáticas</h1>
+        <nav>
+            <a href="index.html">Início</a>
+        </nav>
+    </header>
+    <main>
+        <p>Clique nos tópicos abaixo para ver as fórmulas correspondentes.</p>
+        <div class="container">
+            <div class="topics">
+                <button class="topic-btn" onclick="showFormulas('areas')">Áreas</button>
+                <button class="topic-btn" onclick="showFormulas('volumes')">Volumes</button>
+                <button class="topic-btn" onclick="showFormulas('trigonometry')">Trigonometria</button>
+                <button class="topic-btn" onclick="showFormulas('Potencias')">Potências</button>
+                <button class="topic-btn" onclick="showFormulas('Equacoes')">Equações</button>
+                <button class="topic-btn" onclick="showFormulas('Logaritmo')">Logaritmo</button>
+            </div>
+            <div class="formulas" id="formulas"></div>
+        </div>
+    </main>
+
+    <script src="formulas.js"></script>
+</body>
+</html>

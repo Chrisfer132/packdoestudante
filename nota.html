@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Notas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            width: 100%;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        p.result {
+            font-size: 1.3rem;
+            color: #27ae60;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .divider {
+            width: 100%;
+            height: 2px;
+            background-color: #ddd;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            button {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Notícias Recentes</h1>
+    <br>
+    <a style="text-decoration: none; color: #fffefe;" href="index.html">Inicio</a>
+</header>
+
+<div class="container">
+    <h2>Calculador de Média Anual</h2>
+    <input type="number" id="nota1" step="0.1" min="0" max="10" placeholder="Nota 1º Trimestre">
+    <input type="number" id="nota2" step="0.1" min="0" max="10" placeholder="Nota 2º Trimestre">
+    <input type="number" id="nota3" step="0.1" min="0" max="10" placeholder="Nota 3º Trimestre">
+    <button onclick="calcularMedia()">Calcular Média</button>
+    <p id="resultadoMedia" class="result"></p>
+
+    <div class="divider"></div>
+
+    <h2>Calculador da Nota Faltante</h2>
+    <input type="number" id="nota1_trimestre" step="0.1" min="0" max="10" placeholder="Nota 1º Trimestre">
+    <input type="number" id="nota2_trimestre" step="0.1" min="0" max="10" placeholder="Nota 2º Trimestre">
+    <button onclick="calcularNotaFaltante()">Calcular Nota Faltante</button>
+    <p id="resultadoFaltante" class="result"></p>
+</div>
+
+<script>
+    function calcularMedia() {
+        let nota1 = parseFloat(document.getElementById('nota1').value);
+        let nota2 = parseFloat(document.getElementById('nota2').value);
+        let nota3 = parseFloat(document.getElementById('nota3').value);
+
+        if (!isNaN(nota1) && !isNaN(nota2) && !isNaN(nota3)) {
+            let media = (nota1 + nota2 + nota3) / 3;
+            document.getElementById('resultadoMedia').innerText = 'Sua média anual é: ' + media.toFixed(2);
+        } else {
+            document.getElementById('resultadoMedia').innerText = 'Preencha todas as notas corretamente.';
+        }
+    }
+
+    function calcularNotaFaltante() {
+        let nota1 = parseFloat(document.getElementById('nota1_trimestre').value);
+        let nota2 = parseFloat(document.getElementById('nota2_trimestre').value);
+
+        if (!isNaN(nota1) && !isNaN(nota2)) {
+            let somaAtual = nota1 + nota2;
+            let notaFaltante = 18 - somaAtual;
+
+            if (notaFaltante <= 10 && notaFaltante >= 0) {
+                document.getElementById('resultadoFaltante').innerText = 'Você precisa de: ' + notaFaltante.toFixed(2) + ' no 3º trimestre.';
+            } else if (notaFaltante < 0) {
+                document.getElementById('resultadoFaltante').innerText = 'Você já atingiu a pontuação necessária!';
+            } else {
+                document.getElementById('resultadoFaltante').innerText = 'Nota faltante maior que 10, impossível de atingir.';
+            }
+        } else {
+            document.getElementById('resultadoFaltante').innerText = 'Preencha todas as notas corretamente.';
+        }
+    }
+</script>
+
+</body>
+</html>

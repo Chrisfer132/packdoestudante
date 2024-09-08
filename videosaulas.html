@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendações de Canais de YouTube por Matéria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            width: 90%;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .subject {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+        }
+        .subject h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 0.5rem;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .card img {
+            border-radius: 8px;
+            width: 100%;
+            max-width: 120px;
+            height: auto;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .card p {
+            margin: 0.5rem 0;
+        }
+        .card a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            .card {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card img {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .subject h2 {
+                font-size: 1.2rem;
+            }
+            .card h3 {
+                font-size: 1rem;
+            }
+            .card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Professores YouTube</h1>
+        <br>
+        <a style="text-decoration: none; color: #fffefe;" href="index.html">Inicio</a>
+    </header>
+    <div class="container">
+        <!-- Matéria: Matemática -->
+        <div class="subject">
+            <h2>História</h2>
+            <div class="card">
+                <img src="https://yt3.googleusercontent.com/ytc/AIdro_lFEtf74hQTl0uQmbVMrdocLyjP89VDf8t7L6UH963fYLMm=s160-c-k-c0x00ffffff-no-rj" alt="Canal do Professora Débora Aladim">
+                <div>
+                    <h3><a href="https://www.youtube.com/@deboraaladim" target="_blank">Canal da Professora Débora Aladim</a></h3>
+                    <p>Sobre: Débora Aladim é mineira, formada em História pela UFMG e desde 2013 faz vídeo-aulas que ajudaram milhões de pessoas a estudar e a passar no vestibular. Aqui você vai encontrar vídeo-aulas de História, um método único para fazer redações modelo ENEM e dicas de estudo! </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Matéria: Química -->
+        <div class="subject">
+            <h2>Português</h2>
+            <div class="card">
+                <img src="https://yt3.googleusercontent.com/Hvvy81UWpzBQifWY1AN4N7FswgD9xgu2IOhxs-MsZmGRGp3yYMnTTCMNJHUOfkW8kdQZV-43=s160-c-k-c0x00ffffff-no-rj" alt="Canal do Professor Noslen">
+                <div>
+                    <h3><a href="https://www.youtube.com/@ProfessorNoslen" target="_blank">Canal do Professor Noslen</a></h3>
+                    <p>Sobre: Canal voltado para o ensino de toda a Língua Portuguesa, com o intuito de facilitar a aprendizagem de maneira rápida e divertida! Maior canal de ensino de Língua Portuguesa do mundo, maior canal de educação do Brasil e maior plataforma de LP do Brasil!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Física</h2>
+            <div class="card">
+                <img src="https://yt3.googleusercontent.com/L5Oxi6VGgM9RlNde31BQIPBvkQ30B00Ea94lnESbak-Sa5m2bmAAIdHPOOoRpafu-3whBIeB=s160-c-k-c0x00ffffff-no-rj" alt="Canal do Professor Ramilton Batinga">
+                <div>
+                    <h3><a href="https://www.youtube.com/@prof.ramiltonbatinga" target="_blank">Canal do Professor Ramilton Batinga</a></h3>
+                    <p>Sobre: Ensinar física é a minha paixão, por isso a cada aula me dedico ao máximo para preparar meus alunos para a conquista de seus sonhos. Essa dedicação para o ensino da FÍSICA move meus dias, de modo que procuro sempre novos aperfeiçoamentos e formas para transmitir o meu conhecimento.
+
+                    Sou apaixonado por ensinar aos meus alunos, há mais de 15 anos dedico minha vida ao sucesso deles.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Redação</h2>
+            <div class="card">
+                <img src="https://yt3.googleusercontent.com/ytc/AIdro_n60whMzcwCFdTVsQBBUxq1DDrkSKm1H3hUKAemEr2frQ=s160-c-k-c0x00ffffff-no-rj" alt="Canal do Professor Henrique Araújo">
+                <div>
+                    <h3><a href="https://www.youtube.com/c/ProfHenriqueAra%C3%BAjo" target="_blank">Canal do Professor Henrique Araújo</a></h3>
+                    <p>Sobre: Canal voltado para Redação</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Biologia</h2>
+            <div class="card">
+                <img src="https://yt3.googleusercontent.com/cJL654Ip4Owno2Ijj0PotiXgKom76EeApOr3Srz5XNeZ4qOzIiUT1AhoSuPJ34d-SMsiWdZ-6A=s160-c-k-c0x00ffffff-no-rj" alt="Canal do Professor Samuel Cunha">
+                <div>
+                    <h3><a href="https://www.youtube.com/@professorsamuelcunha" target="_blank">Canal do Professor Samuel Cunha</a></h3>
+                    <p>Sobre: Bem-vindos ao Biologia com Samuel Cunha, um canal dedicado à educação! O prof. Samuel é biólogo licenciado, mestre em parasitologia, formado há mais de dez anos pela Universidade Federal de Pelotas. Durante sua graduação, começou a lecionar de forma beneficente no cursinho presencial Pré Vestibular Desafio, mantido pela UFPel, e desde então se apaixonou pela profissão! No final de 2015, iniciou este canal e colocou em prática o sonho de expandir o seu trabalho e ajudar a melhorar a educação desse brasilzão afora! </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Matemática</h2>
+            <div class="card">
+                <img src="https://yt3.googleusercontent.com/ytc/AIdro_nxkc1Ary3cWv4jvyDZjE94DO1CIsooeDWSBlBYlJpCnJA=s176-c-k-c0x00ffffff-no-rj-mo" alt="Canal do Professor Gustavo Reis">
+                <div>
+                    <h3><a href="https://www.youtube.com/@estudematematica/videos" target="_blank">Canal do Professor Gustavo Reis</a></h3>
+                    <p>Sobre: Conteúdo para entusiastas da Matemática e para quem quer fazer as pazes com ela!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Português</h2>
+            <div class="card">
+                <img src="https://yt3.googleusercontent.com/sSksfMdbWhU7hmDL_PewcVrEqipRWJZrBdT0xVtArszHY8T2w5y6AXN5yKz8Ma-gxcFyIQUv=s160-c-k-c0x00ffffff-no-rj" alt="Canal da Professora Letícia Goés">
+                <div>
+                    <h3><a href="https://www.youtube.com/@portuguescomleticia" target="_blank">Canal da Professora Letícia Goés</a></h3>
+                    <p>Sobre: PORTUGUÊS COMPLETO | Sua aprovação está aqui! Curso completo, do básico ao avançado, com videoaulas exclusivas. Mais de 150 aulas aprofundadas e objetivas com foco em concursos públicos. Resumos em PDF, tabelinhas de revisão, mais de 1.000 questões comentadas de forma detalhada e plano de estudos. Módulos bônus de interpretação de textos, redação e organização dos estudos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Química</h2>
+            <div class="card">
+                <img src="https://yt3.ggpht.com/vTtRQB6uan5rjHZ4mMIGfm-VB3Caqs7e-cpfTKxe69AuL9ymjXJYr-wJTHLfN2ll_IUdJ8Wu=s176-c-k-c0x00ffffff-no-rj-mo" alt="Canal do Professor Gabriel Cabral">
+                <div>
+                    <h3><a href="https://www.youtube.com/@ProfessorGabrielCabral" target="_blank">Canal do Professor Gabriel Cabral</a></h3>
+                    <p>Sobre: Canal voltado para o ensino da Química de maneira rápida e divertida.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Matemática</h2>
+            <div class="card">
+                <img src="https://yt3.googleusercontent.com/ytc/AIdro_mRbvYBdE058O7f7q0sdVQpy6yrm9Od-7oM_2zeLLjEs7U=s176-c-k-c0x00ffffff-no-rj-mo" alt="Canal do Professor Sandro Curió">
+                <div>
+                    <h3><a href="https://www.youtube.com/@sandrocuriodicasdemat" target="_blank">Canal do Professor Sandro Curió</a></h3>
+                    <p>Sobre: O canal   DicasdeMat Sandro Curió tem como objetivo ajudar estudantes, em todos os níveis da matemática, de forma clara e objetiva. 
+                        Através de uma didática descontraída, você absorve todo conteúdo.
+                        Vamos juntos, RUMO AO TOPO!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Português e Redação</h2>
+            <div class="card">
+                <img src="https://yt3.ggpht.com/Dz6VHuAXVi8BSv9n78pjzKjTI5Zv7BFsdgttlsMgheCInoM0CY1pylJsr-rvhWRiND--lLQefw=s176-c-k-c0x00ffffff-no-rj-mo" alt="Canal da Professora Fernanda Pessoa">
+                <div>
+                    <h3><a href="https://www.youtube.com/@FernandaPessoaTV/videos" target="_blank">Canal da Professora Fernanda Pessoa</a></h3>
+                    <p>O Fernanda Pessoa TV, ou FPTV, é o canal oficial do Fernanda Pessoa Grupo Educacional, que abrange as modalidades híbrida e online de ensino preparatório para ENEM e vestibulares. Fernanda Pessoa é a professora do maior curso presencial de português e redação para ENEM e vestibulares do país. </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="subject">
+            <h2>Redação</h2>
+            <div class="card">
+                <img src="https://yt3.googleusercontent.com/ytc/AIdro_nrCweohTYc6Bj-ZGh0VTSNxWaoAem9OzmTi3pMiyzrS_c=s160-c-k-c0x00ffffff-no-rj" alt="Canal da Professora Poxalulu">
+                <div>
+                    <h3><a href="https://www.youtube.com/@Poxalulu/videos" target="_blank">Canal da Professora Poxalulu</a></h3>
+                    <p>Sobre: Canal voltado para Redação</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Sociologia, Filosofia e História</h2>
+            <div class="card">
+                <img src="https://yt3.googleusercontent.com/ytc/AIdro_ljiXGEZW9-X7UhleBv2LozUX6kkRdUtZ5A_x9TLIupjQ=s160-c-k-c0x00ffffff-no-rj" alt="Canal do Professor Pedro Rennó">
+                <div>
+                    <h3><a href="https://www.youtube.com/@Parab%C3%B3lica" target="_blank">Canal do Professor Pedro Rennó</a></h3>
+                    <p>Sobre: Olá, eu sou Pedro Rennó, sou Professor de História, Filosofia e Sociologia de cursinho.
+
+                        Neste canal, Parabólica, terei sempre o maior prazer em lhes ajudar a conquistar os seus objetivos.
+                        </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

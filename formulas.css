@@ -1,0 +1,158 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+main {
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.topic-btn {
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.topic-btn:hover {
+    background-color: #2c3e50;
+    transform: scale(1.05);
+}
+
+.formulas {
+    font-size: 1em;
+    color: #2c3e50;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.formulas h2 {
+    color: #3498db;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.formulas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.formulas li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.formulas li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-size: 1.5em;
+}
+
+.formulas code {
+    background-color: #eef;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.formulas .math {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #eef;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .topic-btn {
+        width: calc(100% - 20px);
+        padding: 12px;
+        font-size: 1.1em;
+    }
+
+    .formulas {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .topic-btn {
+        width: calc(100% - 20px);
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .formulas {
+        padding: 10px;
+    }
+}

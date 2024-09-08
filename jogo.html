@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendações de Canais de YouTube por Matéria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header a {
+            text-decoration: none;
+            color: #fffefe;
+        }
+        .container {
+            width: 90%;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .subject {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+        }
+        .subject h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 0.5rem;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .card img {
+            border-radius: 8px;
+            width: 100%;
+            max-width: 120px;
+            height: auto;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .card p {
+            margin: 0.5rem 0;
+        }
+        .card a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            .card {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card img {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            .subject h2 {
+                font-size: 1.2rem;
+            }
+            .card h3 {
+                font-size: 1rem;
+            }
+            .card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jogos Educacionais</h1>
+        <br>
+        <a style="text-decoration: none; color: #fffefe;" href="index.html">Inicio</a>
+    </header>
+    <div class="container">
+        <!-- Matéria: Matemática -->
+        <div class="subject">
+            <h2>Duolingo</h2>
+            <div class="card">
+                <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/250/duolingo-logo-new-512.png" alt="Canal do Professor João Silva">
+                <div>
+                    <h3><a href="https://www.youtube.com/c/ProfessorJoaoSilva" target="_blank">Idioma</a></h3>
+                    <p>Aplicativo/Site para aprender a dominar qualquer Idioma</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Matéria: Química -->
+        <div class="subject">
+            <h2>Math Playground</h2>
+            <div class="card">
+                <img src="https://i0.wp.com/www.casscolibrary.org/wp-content/uploads/2020/06/math-playground-logo.jpg?fit=629%2C629&ssl=1&w=640" alt="Canal da Professora Maria Santos">
+                <div>
+                    <h3><a href="https://www.mathplayground.com/" target="_blank">Matemática</a></h3>
+                    <p>Aplicativo/Site para aprender matemática de forma descontraida e interativa</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Kahoot</h2>
+            <div class="card">
+                <img src="https://play-lh.googleusercontent.com/AyJnaQ0JfEu-F_4bop5hH4qpJwYJ1blePyer6VVUUm4Al80uWJBje4UZHirrf39wI7uI" alt="Canal da Professora Maria Santos">
+                <div>
+                    <h3><a href="https://kahoot.com/" target="_blank">Geral</a></h3>
+                    <p>Essa é uma plataforma de diversos conteúdos. Você consegue encontrar quiz sobre infinitos assuntos, e o melhor de tudo é que você pode competir com pessoas ao redor do mundo inteiro!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Prodigy</h2>
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/41-jv9ix5vL.png">
+                 <div>
+                <h3><a href="https://www.prodigygame.com/main-en/?" target="_blank">Matemática</a></h3>
+                    <p>Descrição: RPG matemático que faz com que os alunos resolvam problemas matemáticos para avançar no jogo</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Geoguesrr</h2>
+            <div class="card">
+                    <img src="https://play-lh.googleusercontent.com/9HrSXsN2eXcIBQTPvFEBAM5SFXsRdbMVDZ8UveVyfoUraSfpz3yB8k3J1MW8UqKMIA">
+                    <div>
+                    <h3><a href="https://www.geoguessr.com/" target="_blank">Geometria</a></h3>
+                        <p>Descrição: RPG matemático que faz com que os alunos resolvam problemas matemáticos para avançar no jogo</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Abcya</h2>
+            <div class="card">
+                    <img src="https://play-lh.googleusercontent.com/PI4Nvo_m8dXsI_uU6KWbYSo6whjatzOGa131uLuncGlT05TUks6yXRT1dF9pLZ7kVw">
+                    <div>
+                    <h3><a href="https://www.abcya.com/" target="_blank">Geral</a></h3>
+                        <p>Descrição: Site cheio de jogos educativos voltados para crianças do ensino fundamental. Os jogos são projetados para reforçar habilidades em matemática, leitura, escrita e outras matérias de forma lúdica.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Cool Math Games</h2>
+            <div class="card">
+                    <img src="https://ih1.redbubble.net/image.1896622144.7959/st,small,507x507-pad,600x600,f8f8f8.jpg">
+                    <div>
+                    <h3><a href="https://www.coolmathgames.com/" target="_blank">Matemática</a></h3>
+                        <p>Descrição: Oferece uma variedade de jogos que envolvem raciocínio lógico e habilidades matemáticas. É uma ótima ferramenta para praticar matemática de forma divertida e envolvente.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>FunBrain</h2>
+            <div class="card">
+                    <img src="https://kids.sewickleylibrary.org/wp-content/uploads/2018/07/Funbrain-Logo.jpg">
+                    <div>
+                    <h3><a href="https://www.funbrain.com/" target="_blank">Geral</a></h3>
+                        <p>Descrição: Combina jogos com recursos educativos em várias disciplinas. É uma excelente opção para crianças e jovens que querem aprender enquanto se divertem.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>National Geographic Kids</h2>
+            <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Natgeo_Kids_logo.svg/1200px-Natgeo_Kids_logo.svg.png">
+                    <div>
+                    <h3><a href="https://kids.nationalgeographic.com/games/" target="_blank">Geografia, Ciência e História</a></h3>
+                        <p>Descrição: Fferece jogos focados em geografia, ciência e história. É uma maneira envolvente de aprender sobre o mundo ao nosso redor.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subject">
+            <h2>Escola Games</h2>
+            <div class="card">
+                    <img src="https://www.escolagames.com.br/imgs/logo-escolagames.svg">
+                    <div>
+                    <h3><a href="https://www.escolagames.com.br/" target="_blank">Português</a></h3>
+                        <p>Descrição: Oferece vários jogos educativos voltados para crianças, com temas como ortografia, gramática, vocabulário e interpretação de texto. É uma ótima maneira de reforçar o aprendizado do português.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
