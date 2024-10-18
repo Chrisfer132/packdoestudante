@@ -4,6 +4,94 @@ const prev = document.querySelector('.prev');
 const container = document.querySelector('.carousel-container');
 let currentIndex = 0;
 
+
+// Variáveis de controle
+let startTime = 25 * 60; // Tempo em segundos (25 minutos)
+let time = startTime; // Tempo restante
+let timerInterval; // Intervalo do timer
+let isRunning = false; // Controla se o timer está rodando
+
+// Selecionar elementos pelos IDs
+const timerElement = document.querySelector('.timer');
+const startButton = document.getElementById('start-button');
+const pauseButton = document.getElementById('pause-button');
+const resetButton = document.getElementById('reset-button');
+const progressBar = document.querySelector('.progress');
+
+// Função para atualizar o display do tempo
+function updateTimerDisplay() {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    timerElement.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+}
+
+// Função para atualizar a barra de progresso
+function updateProgressBar() {
+    const progressPercent = ((startTime - time) / startTime) * 100;
+    progressBar.style.width = `${progressPercent}%`;
+}
+
+// Função para iniciar o timer
+function startTimer() {
+    if (!isRunning) {
+        isRunning = true;
+        timerInterval = setInterval(() => {
+            time--;
+            updateTimerDisplay();
+            updateProgressBar();
+            
+            // Quando o tempo acabar
+            if (time <= 0) {
+                clearInterval(timerInterval);
+                timerElement.classList.add('timer-animation'); // Animação ao terminar
+                isRunning = false;
+                startButton.disabled = false;
+                pauseButton.disabled = true;
+                resetButton.disabled = false;
+            }
+        }, 1000);
+
+        startButton.disabled = true;
+        pauseButton.disabled = false;
+        resetButton.disabled = true;
+    }
+}
+
+// Função para pausar o timer
+function pauseTimer() {
+    if (isRunning) {
+        clearInterval(timerInterval);
+        isRunning = false;
+        startButton.disabled = false;
+        pauseButton.disabled = true;
+        resetButton.disabled = false;
+    }
+}
+
+// Função para resetar o timer
+function resetTimer() {
+    clearInterval(timerInterval);
+    time = startTime;
+    updateTimerDisplay();
+    updateProgressBar();
+    timerElement.classList.remove('timer-animation'); // Remove animação
+    isRunning = false;
+    
+    startButton.disabled = false;
+    pauseButton.disabled = true;
+    resetButton.disabled = true;
+}
+
+// Event listeners para os botões
+startButton.addEventListener('click', startTimer);
+pauseButton.addEventListener('click', pauseTimer);
+resetButton.addEventListener('click', resetTimer);
+
+// Inicializar o display do timer
+updateTimerDisplay();
+
+
+
 function showSlide(index) {
     if (index >= slides.length) {
         currentIndex = 0;
@@ -104,3 +192,4 @@ document.getElementById('search-form').addEventListener('submit', function(e) {
         }
     });
 });
+

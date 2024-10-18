@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salas de Estudos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #2c3e50, #c3c4d7); /* Gradiente de fundo */
+            height: 100vh;
+            margin: 0;
+            color: #fff; /* Cor do texto */
+            text-align: center;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Alterado para coluna */
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px; /* Margem superior para dar espaço ao cabeçalho */
+            background: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra do container */
+        }
+
+        h1 {
+            font-size: 2.8rem; /* Aumentar o tamanho do título */
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra do texto do título */
+        }
+
+        .subjects {
+            
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsividade */
+            gap: 20px;
+        }
+
+        .subject {
+            
+            background-color: #007bff; /* Azul padrão */
+            color: white;
+            padding: 20px;
+            text-decoration: none;
+            border-radius: 10px; /* Bordas arredondadas */
+            font-size: 1.5rem; /* Aumentar o tamanho da fonte */
+            transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra dos botões */
+        }
+
+        .subject:hover {
+            background-color: #0056b3; /* Azul escuro ao passar o mouse */
+            transform: translateY(-5px); /* Elevação do botão */
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem; /* Tamanho do título em telas pequenas */
+            }
+
+            .subject {
+                font-size: 1.2rem; /* Tamanho do botão em telas pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Salas de Estudo</h1>
+        <br>
+        <a style="text-decoration: none; color: #fffefe;" href="index.html">Inicio</a>
+    </header>
+    <div class="container">
+        <h1>Escolha sua Matéria</h1>
+        <div class="subjects">
+            <a href="chat.html?subject=Matematica" class="subject">Matemática</a>
+            <a href="chat.html?subject=Portugues" class="subject">Português</a>
+            <a href="chat.html?subject=Fisica" class="subject">Física</a>
+            <a href="chat.html?subject=Ingles" class="subject">Inglês</a>
+        </div>
+    </div>
+</body>
+</html>

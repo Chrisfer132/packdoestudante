@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Salas de Estudos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            max-width: 400px; /* largura máxima do chat */
+            border-radius: 15px; /* bordas arredondadas */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* sombra mais intensa */
+            background-color: #ffffff; /* fundo branco para o chat */
+        }
+    
+        #subject-name {
+            background-color: #0056b3; /* Azul escuro */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+            border-radius: 10px; /* bordas arredondadas no cabeçalho */
+        }
+    
+        #chat-window {
+            flex: 1;
+            padding: 15px;
+            background-color: #f9f9f9;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+            max-height: 400px; /* Definindo altura fixa */
+        }
+    
+        #output {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .user-message {
+            background-color: #e6f7ff; /* cor de fundo do usuário */
+            border-radius: 15px; /* bordas arredondadas */
+            padding: 10px; /* espaçamento interno */
+            margin: 10px 0; /* margem vertical */
+            align-self: flex-end; /* alinhamento à direita */
+            max-width: 80%; /* largura máxima */
+            position: relative; /* para o posicionamento do horário */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* sombra leve */
+        }
+    
+        .bot-message {
+            background-color: #fff; /* cor de fundo do bot */
+            border-radius: 15px; /* bordas arredondadas */
+            padding: 10px; /* espaçamento interno */
+            margin: 10px 0; /* margem vertical */
+            align-self: flex-start; /* alinhamento à esquerda */
+            max-width: 80%; /* largura máxima */
+            position: relative; /* para o posicionamento do horário */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* sombra leve */
+        }
+    
+        /* Estilo do nome do usuário/bot */
+        .message-author {
+            font-weight: bold; /* texto em negrito */
+        }
+    
+        /* Estilo do texto da mensagem */
+        .message-text {
+            font-size: 14px; /* tamanho da fonte */
+        }
+    
+        /* Estilo do horário da mensagem */
+        .timestamp {
+            font-size: 0.7rem;
+            color: #aaa;
+            position: absolute;
+            bottom: -15px;
+            right: 10px;
+        }
+    
+        input[type="text"] {
+            width: calc(100% - 60px);
+            padding: 10px;
+            border: none;
+            border-top: 1px solid #ddd;
+            font-size: 1rem;
+            border-radius: 20px; /* bordas arredondadas no campo de texto */
+        }
+    
+        button {
+            width: 60px;
+            background-color: #007bff; /* botão azul */
+            color: white;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 20px; /* bordas arredondadas no botão */
+        }
+    
+        button:hover {
+            background-color: #0056b3; /* azul escuro ao passar o mouse */
+        }
+    
+        .chat-footer {
+            display: flex;
+            border-top: 1px solid #ddd;
+            padding-top: 10px; /* espaçamento acima do rodapé */
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="chat-container">
+        <h2 id="subject-name"></h2>
+        <p style="font-size: 1.0em; text-align: center;"><a style=" color: #0056b3;" href="salaestudo.html">Retornar</a></p>
+        <div id="chat-window">
+            <div id="output"></div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="message" placeholder="Digite sua mensagem...">
+            <button id="send" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Firebase Integration -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+        import { getDatabase, ref, push, onChildAdded } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBkORHTvaDQhTOzZRkC54HgVZjaj_Jyj-E",
+            authDomain: "saladeestudo-9126d.firebaseapp.com",
+            databaseURL: "https://saladeestudo-9126d-default-rtdb.firebaseio.com",
+            projectId: "saladeestudo-9126d",
+            storageBucket: "saladeestudo-9126d.appspot.com",
+            messagingSenderId: "498967411525",
+            appId: "1:498967411525:web:1c852e5f87303f40485c2c"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const subject = urlParams.get('subject');
+        document.getElementById('subject-name').innerText = `Sala de ${subject}`;
+
+        // Variáveis globais
+        let userName = prompt("Por favor, insira seu nome:") || "Usuário"; // Prompt para nome do usuário
+
+        function sendMessage() {
+            const message = document.getElementById('message').value;
+            if (message.trim()) {
+                const chatRef = ref(database, `chats/${subject}`);
+                push(chatRef, {
+                    message: message,
+                    user: userName, // Adicionando nome do usuário
+                    timestamp: Date.now()
+                });
+                document.getElementById('message').value = '';
+            }
+        }
+
+        const chatWindow = document.getElementById('output');
+        const chatRef = ref(database, `chats/${subject}`);
+        onChildAdded(chatRef, function(snapshot) {
+            const data = snapshot.val();
+            const messageElement = document.createElement('div');
+
+            // Verifica se a mensagem é do usuário ou do bot
+            if (data.user === userName) {
+                messageElement.className = 'user-message'; // Estilo para mensagens do usuário
+            } else {
+                messageElement.className = 'bot-message'; // Estilo para mensagens do bot
+            }
+
+            // Adicionando mensagem e timestamp
+            messageElement.innerHTML = `
+                <span class="message-author">${data.user}</span>: <span class="message-text">${data.message}</span>
+                <span class="timestamp">${new Date(data.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+            `;
+            chatWindow.appendChild(messageElement);
+            chatWindow.scrollTop = chatWindow.scrollHeight; // Rola para a última mensagem
+        });
+
+        document.getElementById('send').addEventListener('click', sendMessage);
+    </script>
+</body>
+</html>

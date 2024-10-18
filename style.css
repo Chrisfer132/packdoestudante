@@ -502,7 +502,7 @@ footer nav ul li a:hover {
     background-color: #fff;
     padding: 20px;
     border-radius: 15px;
-    max-width: 600px;
+    max-width: 90%;
     margin: 20px auto;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
@@ -626,4 +626,156 @@ footer nav ul li a:hover {
     font-weight: bold;
     text-align: right;
   }
+
+
+  /* Estilo geral do Pomodoro */
+.pomodoro-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 90%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Título */
+.pomodoro-section h2, #pomodoro-title {
+    font-size: 28px;
+    color: #03a9f4;
+    margin-bottom: 20px;
+}
+
+/* Timer */
+.timer, #pomodoro-timer {
+    font-size: 48px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Botões */
+#start-button, #pause-button, #reset-button, .pomodoro-button {
+    background-color: #03a9f4;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+    min-width: 100px;
+}
+
+#start-button:hover, #pause-button:hover, #reset-button:hover, .pomodoro-button:hover {
+    background-color: #007bff;
+}
+
+#start-button:disabled, #pause-button:disabled, #reset-button:disabled, .pomodoro-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Animação de contagem */
+.timer-animation, .pomodoro-timer-animation {
+    font-size: 48px;
+    font-weight: bold;
+    color: #f44336;
+    animation: pulse 1s infinite;
+}
+
+/* Animação de pulsar no timer */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Barra de progresso */
+.progress-bar, .pomodoro-progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-top: 20px;
+    height: 20px;
+}
+
+.progress, .pomodoro-progress {
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 25px;
+    transition: width 0.4s ease;
+}
+
+/* Container principal do Pomodoro */
+.pomodoro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+/* Estilo do Container de botões */
+#pomodoro-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .timer, #pomodoro-timer {
+        font-size: 2.5rem;
+    }
+
+    #start-button, #pause-button, #reset-button, .pomodoro-button {
+        font-size: 1rem;
+        padding: 8px 15px;
+        margin: 5px;
+    }
+
+    #pomodoro-controls {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .progress-bar, .pomodoro-progress-bar-container {
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timer, #pomodoro-timer {
+        font-size: 2rem;
+    }
+
+    #start-button, #pause-button, #reset-button, .pomodoro-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    #pomodoro-controls {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+}
+
   
+
