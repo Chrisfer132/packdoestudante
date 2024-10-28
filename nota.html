@@ -164,7 +164,7 @@
         let nota3 = parseFloat(document.getElementById('nota3').value);
 
         if (!isNaN(nota1) && !isNaN(nota2) && !isNaN(nota3)) {
-            let media = (nota1 + nota2 + nota3) / 3;
+            let media = (3 * nota1 + 3 * nota2 + 4 * nota3) / 10;
             document.getElementById('resultadoMedia').innerText = 'Sua média anual é: ' + media.toFixed(2);
         } else {
             document.getElementById('resultadoMedia').innerText = 'Preencha todas as notas corretamente.';
@@ -176,8 +176,7 @@
         let nota2 = parseFloat(document.getElementById('nota2_trimestre').value);
 
         if (!isNaN(nota1) && !isNaN(nota2)) {
-            let somaAtual = nota1 + nota2;
-            let notaFaltante = 18 - somaAtual;
+            let notaFaltante = (60 - 3 * (nota1 + nota2)) / 4;
 
             if (notaFaltante <= 10 && notaFaltante >= 0) {
                 document.getElementById('resultadoFaltante').innerText = 'Você precisa de: ' + notaFaltante.toFixed(2) + ' no 3º trimestre.';
