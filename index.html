@@ -37,18 +37,18 @@
         <section class="carousel">
             <div class="carousel-container">
                 <div class="carousel-slide">
-                    <img src="1.webp" alt="Imagem 1">
+                    <img id="image1" alt="Imagem 1">
                 </div>
                 <div class="carousel-slide">
-                    <img src="2.webp" alt="Imagem 2">
+                    <img id="image2" alt="Imagem 2">
                 </div>
                 <div class="carousel-slide">
-                    <img src="3.webp"Imagem 2">
+                    <img id="image3" alt="Imagem 3">
                 </div>
             </div>
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
-        </section>
+        </section>        
         
         
 
@@ -76,16 +76,35 @@
     </section>
     
     <!-- Seção de Depoimentos -->
+    <!-- Seção de Depoimentos -->
     <section class="testimonials-section">
         <h2>Depoimentos de Alunos</h2>
-        <blockquote>
-            <p>"O Pack do Estudante mudou minha forma de estudar. Agora me sinto muito mais preparado para os exames!"</p>
-            <cite>- Lucas Marquetti, Estudante do Ensino Médio 
-                ㅤ
-            </cite>
-        </blockquote>
-        <!-- Mais depoimentos... -->
+        <div class="testimonial-container">
+            <blockquote class="testimonial active">
+                <p>"O Pack do Estudante mudou minha forma de estudar. Agora me sinto muito mais preparado para os exames!"</p>
+                <cite>- Lucas Marquetti, Estudante do Ensino Médio</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+                <p>"O Pack dos Estudantes facilita meus estudos com conteúdos organizados e diretos, além de ajudar na hora de calcular minhas notas. Recomendo para quem quer melhorar nos estudos!"</p>
+                <cite>- Isabella Mazzon Gauer, Estudante do Ensino Médio</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+                <p>"Nunca me senti tão confiante nas provas quanto agora, depois de usar o Pack do Estudante."</p>
+                <cite>- João Pereira, Estudante do Ensino Médio</cite>
+            </blockquote>
+            <blockquote class="testimonial">
+                <p>"O Pack do Estudante foi essencial para minha aprovação no vestibular. Um material completo e de fácil entendimento."</p>
+                <cite>- Ana Santos, Vestibulanda</cite>
+            </blockquote>
+        </div>
+        <div class="navigation-buttons">
+            <button class="prev-button">←</button>
+            <button class="next-button">→</button>
+        </div>
     </section>
+
+
+
 
     <!-- Seção Materiais e Ferramentas -->
     <section class="materials-section">
@@ -111,7 +130,7 @@
     </section>
 
     <div class="countdown-container">
-        <h2 id="enem">Contagem Regressiva para o ENEM</h2>
+        <h2 id="enem">Contagem Regressiva para o 2° Dia ENEM</h2>
         <div id="countdown">
           <div class="time-box">
             <span id="days"></span>
@@ -162,10 +181,11 @@
                 <img src="whatsapp.png" alt="Grupos de Estudos">
                 <p>Grupos de Estudos</p>
             </a>
-            <a href="salaestudo.html" class="icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/4696/4696757.png" alt="Sala de Estudos">
-                <p>Salas de Estudos</p>
+            <a href="grupos.html" class="icon">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKFvkJrRGdv2wSuAV37mnzZTOJTanNBqoMOA&s" alt="Grupos de Estudos">
+                <p>Vamo para cima - SEDUC</p>
             </a>
+            
         </div>
     </section>
     <section id="pomodoro-section">
@@ -194,13 +214,13 @@
 <section class="news-section">
     <h2 style="text-align: center;">Últimas Novidades</h2>
     <article class="news-item">
-        <h3><a href="https://descomplica.com.br/blog/redacao-nota-1000-enem/">ENEM 2024: Dicas para a Redação</a></h3>
-        <p>Confira as melhores estratégias para escrever uma redação nota 1000 no ENEM 2024.</p>
+        <h3><a href="https://www.cnnbrasil.com.br/educacao/gabarito-prova-amarela-enem-2024-confira-as-respostas-do-1o-dia/">Gabarito prova amarela Enem 2024: confira as respostas do 1º dia</a></h3>
+        <p>Primeiro dia de Enem contou com provas de linguagens, ciências humanas e redação; consulte gabaritos extraoficiais</p>
     </article>
     <article class="news-item">
-            <h3><a href="https://vestibular.brasilescola.uol.com.br/estudar-no-exterior/7-sites-para-procurar-bolsas-estudo-no-exterior.htm">Novas Bolsas de Estudo Disponíveis</a></h3>
-            <p>Saiba como se candidatar às novas bolsas de estudo oferecidas por universidades internacionais.</p>
-        </article>
+            <h3><a href="https://www.cnnbrasil.com.br/educacao/5-paises-que-oferecem-bolsas-de-estudo-para-brasileiros-eua-canada-e-mais/">EUA, Canadá e mais: 5 países que oferecem bolsas de estudo para brasileiros</a></h3>
+            <p>As oportunidades incluem financiamento para cursos de idiomas, graduação e pós-graduação</p>
+        </article>  
         <!-- Mais notícias... -->
     </section>
 

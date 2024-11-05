@@ -1,8 +1,23 @@
-const slides = document.querySelectorAll('.carousel-slide');
-const next = document.querySelector('.next');
-const prev = document.querySelector('.prev');
-const container = document.querySelector('.carousel-container');
-let currentIndex = 0;
+const testimonials = document.querySelectorAll('.testimonial');
+let currentTestimonial = 0;
+
+function showTestimonial(index) {
+    testimonials.forEach((testimonial, i) => {
+        testimonial.classList.toggle('active', i === index);
+    });
+}
+
+document.querySelector('.next-button').addEventListener('click', () => {
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    showTestimonial(currentTestimonial);
+});
+
+document.querySelector('.prev-button').addEventListener('click', () => {
+    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(currentTestimonial);
+});
+
+showTestimonial(currentTestimonial);
 
 
 // Variáveis de controle
@@ -91,6 +106,31 @@ resetButton.addEventListener('click', resetTimer);
 updateTimerDisplay();
 
 
+// Definindo URLs para desktop e dispositivos móveis
+const desktopImages = ["img/1-pc.svg", "img/2-pc.svg", "img/3-pc.svg"];
+const mobileImages = ["img/1.svg", "img/2.svg", "img/3.svg"];
+
+// Função para carregar imagens conforme o dispositivo
+function loadCarouselImages() {
+    const images = window.innerWidth <= 768 ? mobileImages : desktopImages;
+    
+    document.getElementById("image1").src = images[0];
+    document.getElementById("image2").src = images[1];
+    document.getElementById("image3").src = images[2];
+}
+
+// Carrega as imagens ao carregar a página
+window.addEventListener("load", loadCarouselImages);
+
+// Atualiza as imagens se a janela for redimensionada
+window.addEventListener("resize", loadCarouselImages);
+
+// Configuração do carrossel
+let currentIndex = 0;
+const container = document.querySelector('.carousel-container');
+const slides = document.querySelectorAll('.carousel-slide');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
 
 function showSlide(index) {
     if (index >= slides.length) {
@@ -122,8 +162,10 @@ setInterval(() => {
 showSlide(0);
 
 
+
+
 // Definindo a data do ENEM
-const examDate = new Date('November 3, 2024 00:00:00').getTime();
+const examDate = new Date('November 10, 2024 00:00:00').getTime();
 
 const countdown = setInterval(() => {
   const now = new Date().getTime();
@@ -192,4 +234,7 @@ document.getElementById('search-form').addEventListener('submit', function(e) {
         }
     });
 });
+
+
+
 
