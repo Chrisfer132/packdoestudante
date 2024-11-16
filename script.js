@@ -165,7 +165,7 @@ showSlide(0);
 
 
 // Definindo a data do ENEM
-const examDate = new Date('November 10, 2024 00:00:00').getTime();
+const examDate = new Date('January 13, 2024 00:00:00').getTime();
 
 const countdown = setInterval(() => {
   const now = new Date().getTime();
@@ -184,7 +184,7 @@ const countdown = setInterval(() => {
   // Quando a contagem chegar a zero
   if (timeLeft < 0) {
     clearInterval(countdown);
-    document.getElementById('countdown').innerHTML = "O ENEM já começou!";
+    document.getElementById('countdown').innerHTML = "O resultado já saiu!";
   }
 }, 1000);
 
