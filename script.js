@@ -165,7 +165,7 @@ showSlide(0);
 
 
 // Definindo a data do ENEM
-const examDate = new Date('January 13, 2024 00:00:00').getTime();
+const examDate = new Date('January 13, 2025 00:00:00').getTime();
 
 const countdown = setInterval(() => {
   const now = new Date().getTime();
