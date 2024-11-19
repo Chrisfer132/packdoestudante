@@ -12,26 +12,12 @@ header {
     color: white;
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 15px;
+    text-align: center;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
-}
-
-header a {
-    color: #fffefe;
-    text-decoration: none;
-    font-size: 1.2em;
 }
 
 main {
@@ -50,7 +36,7 @@ section#tips {
 section#tips h2 {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 2.2em;
+    font-size: 2em;
     color: #2980b9;
 }
 
@@ -64,7 +50,7 @@ section#tips article {
 
 section#tips article h3 {
     margin-top: 0;
-    margin-left: 15px;
+    margin-left: 10px;
     font-size: 1.5em;
     color: #2c3e50;
     display: flex;
@@ -73,13 +59,7 @@ section#tips article h3 {
 
 section#tips article i {
     color: #2980b9;
-    font-size: 1.8em;
-    margin-right: 15px;
-}
-
-section#tips article p {
-    font-size: 1.1em;
-    line-height: 1.6;
+    font-size: 1.5em;
 }
 
 section#tips article:last-child {
@@ -117,13 +97,5 @@ footer {
 
     section#tips article i {
         margin-bottom: 10px;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    header a {
-        font-size: 1.1em;
     }
 }
