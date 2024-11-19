@@ -41,10 +41,11 @@ section.apostilas {
 .apostila h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
+    color: white;
 }
 
 .apostila button {
-    background-color: #2c3e50;
+    background-color: #3498db;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -54,5 +55,5 @@ section.apostilas {
 }
 
 .apostila button:hover {
-    background-color: #2c3e50;
+    background-color: #2b8dce;
 }
