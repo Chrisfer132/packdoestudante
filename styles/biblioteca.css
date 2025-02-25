@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+header a {
+    text-decoration: none;
+    color: #fffefe;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.search-filter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.search-filter input[type="text"],
+.search-filter select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.book-item {
+    flex: 1 1 30%;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+.book-item h3 {
+    margin: 10px 0;
+    color: #333;
+}
+.book-item button {
+    padding: 10px 15px;
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.book-item button:hover {
+    background-color: #216999;
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .search-filter {
+        flex-direction: column;
+    }
+    .search-filter input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .search-filter select {
+        width: 100%;
+    }
+    .book-item {
+        flex: 1 1 100%;
+    }
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    .book-item {
+        padding: 10px;
+    }
+}
